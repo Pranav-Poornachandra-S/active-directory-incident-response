@@ -28,21 +28,21 @@ The lab consists of an isolated Active Directory domain (`adir.local`) mapped ac
 
 ## Environment Provisioning & Domain Setup
 
-### 1. Active Directory Organizational Structure
-Configured standard enterprise Organizational Units (`IT`, `HR`) and populated user accounts.
-
-![AD OUs](resources/active_directory_ous.png)
-
-### 2. Domain Infrastructure & Client Onboarding
+### 1. Domain Infrastructure & Client Onboarding
 Promoted Windows Server to primary Domain Controller for `adir.local` and joined the target Windows 10 workstation (`Target-DESKTOP-2SC49VO`).
 
 | Domain Controller Setup | Client Domain Join Verification |
 | :---: | :---: |
 | ![DC Setup](resources/dc_installation.png) | ![Domain Join](resources/adir_domain_join.png) |
 
+### 2. Active Directory Organizational Structure
+Configured standard enterprise Organizational Units (`IT`, `HR`) and populated user accounts.
+
+![AD OUs](resources/active_directory_ous.png)
+
 ---
 
-## Adversary Emulation & Attack Execution
+## Adversary Emulation
 
 ### 1. RDP Brute-Force
 Simulated unauthenticated external access attacks targeting domain user accounts (`jsmith`, `tsmith`) over Remote Desktop Protocol (Port 3389) using `Crowbar` on Kali Linux.
@@ -72,4 +72,6 @@ index="endpoint" EventCode=4625
 ```spl
 index="endpoint" "NewLocalUser"
 ```
-![Splunk Logs Local Account Creation](resources/splunk_logs_local_acccount_creation.png)
+![Splunk Logs Local Account Creation](resources/splunk_logs_local_account_creation.png)
+
+---
