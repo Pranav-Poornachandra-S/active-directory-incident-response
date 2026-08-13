@@ -1,10 +1,10 @@
 # Active Directory Incident Response Lab
 
-[![Active Directory](https://img.shields.io/badge/Active_Directory-0078D6?style=flat&logo=windows&logoColor=white)](https://microsoft.com)
-[![Splunk Enterprise](https://img.shields.io/badge/Splunk_Enterprise-000000?style=flat&logo=splunk&logoColor=white)](https://splunk.com)
-[![Sysmon](https://img.shields.io/badge/Sysmon-0080FF?style=flat&logo=shield&logoColor=white)](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
-[![Atomic Red Team](https://img.shields.io/badge/Atomic_Red_Team-D22128?style=flat&logo=terminal&logoColor=white)](https://atomicredteam.io)
-[![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C93?style=flat&logo=kalilinux&logoColor=white)](https://kali.org)
+[![Active Directory](https://img.shields.io/badge/Identity-Active_Directory-0078D6?style=for-the-badge&logo=windows11&logoColor=white)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/active-directory-domain-services)
+[![Splunk Enterprise](https://img.shields.io/badge/SIEM-Splunk_Enterprise-000000?style=for-the-badge&logo=splunk&logoColor=white)](https://www.splunk.com/)
+[![Sysmon](https://img.shields.io/badge/Telemetry-Sysmon-0080FF?style=for-the-badge&logo=shield&logoColor=white)](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
+[![Atomic Red Team](https://img.shields.io/badge/Adversary_Emulation-Atomic_Red_Team-D22128?style=for-the-badge&logo=terminal&logoColor=white)](https://atomicredteam.io/)
+[![Kali Linux](https://img.shields.io/badge/Attacker-Kali_Linux-557C93?style=for-the-badge&logo=kalilinux&logoColor=white)](https://www.kali.org/)
 
 An end-to-end Active Directory lab built to simulate real-world adversary TTPs, capture telemetry via Sysmon and Windows Event Logs and perform threat hunting using Splunk Enterprise.
 
