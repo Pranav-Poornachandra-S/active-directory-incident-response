@@ -14,7 +14,10 @@ An end-to-end Active Directory lab built to simulate real-world adversary TTPs, 
 
 The lab consists of an isolated Active Directory domain (`adir.local`) mapped across a `192.168.10.0/24` subnet. Centralized log aggregation is handled by Splunk Universal Forwarders shipping event telemetry directly to a dedicated Splunk Enterprise indexer.
 
-![Network Architecture](resources/active_directory_incident_response_architecture.jpg)
+<p align="center">
+  <img src="resources/active_directory_incident_response_architecture.jpg" alt="Network Architecture" width="700">
+  <br>
+</p>
 
 ### Subnet & VM Configurations
 | Host Role | OS / Software Stack | IP Address | Configured Telemetry |
@@ -28,17 +31,20 @@ The lab consists of an isolated Active Directory domain (`adir.local`) mapped ac
 
 ## Environment Provisioning & Domain Setup
 
-### 1. Domain Infrastructure & Client Onboarding
+### 1. Domain Infrastructure & User Onboarding
 Promoted Windows Server to primary Domain Controller for `adir.local` and joined the target Windows 10 workstation (`Target-DESKTOP-2SC49VO`).
 
-| Domain Controller Setup | Client Domain Join Verification |
+| Domain Controller Setup | User Domain Join Verification |
 | :---: | :---: |
 | ![DC Setup](resources/dc_installation.png) | ![Domain Join](resources/adir_domain_join.png) |
 
 ### 2. Active Directory Organizational Structure
 Configured standard enterprise Organizational Units (`IT`, `HR`) and populated user accounts.
 
-![AD OUs](resources/active_directory_ous.png)
+<p align="center">
+  <img src="resources/active_directory_ous.png" alt="AD OUs" width="700">
+  <br>
+</p>
 
 ---
 
@@ -60,18 +66,18 @@ Executed MITRE ATT&CK **T1136.001 (Persistence: Local Account Creation)** using 
 
 ### Hunt 1: RDP Brute-Force Detection
 * **Objective:** Detect failed login attempts indicative of brute-force.
-* **SPL Query:**
-```spl
-index="endpoint" EventCode=4625
-```
+* **SPL Query:** ```spl
+                  index="endpoint" EventCode=4625
+                  ```
+
 ![Splunk Log Brute Force](resources/splunk_log_failed_login.png)
 
 ### Hunt 2: Local Account Creation Detection
 * **Objective:** Detect local account creation indicative of persistence.
-* **SPL Query:**
-```spl
-index="endpoint" "NewLocalUser"
-```
+* **SPL Query:** ```spl
+                  index="endpoint" NewLocalUser
+                  ```
+
 ![Splunk Logs Local Account Creation](resources/splunk_logs_local_account_creation.png)
 
 ---
