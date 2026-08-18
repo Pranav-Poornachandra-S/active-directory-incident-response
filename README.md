@@ -56,7 +56,7 @@ Simulated unauthenticated external access attacks targeting domain user accounts
 ![Crowbar Attack](resources/attack_simulation_kali.png)
 
 ### 2. Automated Account Creation
-Executed MITRE ATT&CK **T1136.001 (Persistence: Local Account Creation)** using `Invoke-AtomicTest` inside PowerShell to simulate administrative privilege abuse.
+Executed MITRE ATT&CK T1136.001 (Persistence: Local Account Creation) using `Invoke-AtomicTest` inside PowerShell to simulate administrative privilege abuse.
 
 ![Atomic Red Team Execution](resources/attack_simulation_atomicredteam.png)
 
@@ -66,16 +66,14 @@ Executed MITRE ATT&CK **T1136.001 (Persistence: Local Account Creation)** using 
 
 ### Hunt 1: RDP Brute-Force Detection
 * **Objective:** Detect failed login attempts indicative of brute-force.
-* **SPL Query:** ```spl
-                  index="endpoint" EventCode=4625
+* **SPL Query:** ```index="endpoint" EventCode=4625
                   ```
 
 ![Splunk Log Brute Force](resources/splunk_log_failed_login.png)
 
 ### Hunt 2: Local Account Creation Detection
 * **Objective:** Detect local account creation indicative of persistence.
-* **SPL Query:** ```spl
-                  index="endpoint" NewLocalUser
+* **SPL Query:** ```index="endpoint" NewLocalUser
                   ```
 
 ![Splunk Logs Local Account Creation](resources/splunk_logs_local_account_creation.png)
