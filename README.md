@@ -6,7 +6,7 @@
 [![Atomic Red Team](https://img.shields.io/badge/Adversary_Emulation-Atomic_Red_Team-D22128?style=for-the-badge&logo=terminal&logoColor=white)](https://atomicredteam.io/)
 [![Kali Linux](https://img.shields.io/badge/Attacker-Kali_Linux-557C93?style=for-the-badge&logo=kalilinux&logoColor=white)](https://www.kali.org/)
 
-An end-to-end Active Directory lab built to simulate real-world adversary TTPs, capture telemetry via Sysmon and Windows Event Logs and perform threat hunting using Splunk Enterprise
+An end-to-end Active Directory lab built to simulate real-world adversary TTPs, capture telemetry via Sysmon and Windows Event Logs and perform threat hunting using Splunk Enterprise.
 
 ---
 
