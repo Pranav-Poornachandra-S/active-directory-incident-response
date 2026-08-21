@@ -24,7 +24,7 @@ The lab consists of an isolated Active Directory domain (`adir.local`) mapped ac
 | :--- | :--- | :--- | :--- |
 | **Domain Controller** | Windows Server 2022 (AD DS, DNS) | `192.168.10.7` | Sysmon + Splunk Universal Forwarder |
 | **Splunk Server** | Ubuntu Server 22.04 (Splunk Enterprise) | `192.168.10.3` | Centralized Indexer (`index=endpoint`) |
-| **Target Workstation** | Windows 10 Pro | `192.168.10.100` | Sysmon + Splunk Universal Forwarder + Atomic Red Team |
+| **Target Workstation** | Windows 10 | `192.168.10.100` | Sysmon + Splunk Universal Forwarder + Atomic Red Team |
 | **Attacker Machine** | Kali Linux | `192.168.10.250` | Crowbar |
 
 ---
